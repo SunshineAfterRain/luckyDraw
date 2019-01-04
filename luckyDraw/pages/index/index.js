@@ -7,7 +7,7 @@ Page({
   data: {
     userInfo: 'asd'
   },
-  getUserInfo(){
+  getUserInfo(code){
     wx.getSetting({
       success: (res) => {
         console.log(res)
@@ -15,7 +15,22 @@ Page({
           wx.getUserInfo({
             success: (res) => {
               wx.setStorageSync('userInfo', res)
-              this.login()
+              console.info('code:' + code, 'encryptedData:' + wx.getStorageSync('userInfo').encryptedData, 'iv:' +wx.getStorageSync('userInfo').iv)
+       
+              wx.request({
+                url: 'https://luckdraw.xyz/userInfo/login',
+                data: {
+                  code: code,
+                  encryptedData: wx.getStorageSync('userInfo').encryptedData,
+                  iv: wx.getStorageSync('userInfo').iv,
+                },
+                success: (res) => {
+                  console.log(res)
+                  if (res.statusCode == 200 && res.code == 200) {
+
+                  }
+                }
+              })
             }
           })
         } else {
@@ -31,20 +46,8 @@ Page({
     wx.login({
       success: (res) => {
         if (res.code) {
-          wx.request({
-            url: 'https://luckdraw.xyz/userInfo/login',
-            data: {
-              code: res.code,
-              encryptedData: wx.getStorageSync('userInfo').encryptedData,
-              iv: wx.getStorageSync('userInfo').iv,
-            },
-            success: (res) => {
-              console.log(res)
-              if (res.statusCode == 200 && res.code == 200) {
-
-              }
-            }
-          })
+          console.log(res.code)
+          this.getUserInfo(res.code)
         }
       }
     })
@@ -54,7 +57,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getUserInfo()
+    this.login()
   },
 
   /**

@@ -8,12 +8,14 @@
 		"es6": true,
 		"postcss": true,
 		"minified": true,
-		"newFeature": true
+		"newFeature": true,
+		"autoAudits": false,
+		"nodeModules": true
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.4.3",
 	"appid": "wx8eccc1e600eec9fe",
-	"projectname": "luckyDraw",
+	"projectname": "luckyDrawMini",
 	"isGameTourist": false,
 	"condition": {
 		"search": {
