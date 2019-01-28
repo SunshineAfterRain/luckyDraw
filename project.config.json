@@ -15,7 +15,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.4.3",
 	"appid": "wx8eccc1e600eec9fe",
-	"projectname": "luckyDrawMini",
+	"projectname": "luckyDraw",
 	"isGameTourist": false,
 	"condition": {
 		"search": {
