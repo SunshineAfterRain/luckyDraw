@@ -1,2 +1,2 @@
 <!--pages/mine/mine.wxml-->
-<text>pages/mine/mine.wxml</text>
+<rich-text nodes="{{mineInfo.nickName}}" bindtap="tap"></rich-text>

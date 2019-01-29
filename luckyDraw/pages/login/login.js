@@ -26,8 +26,11 @@ Page({
             },
             success: (res) => {
               console.log(res)
-              if (res.statusCode == 200 && res.code == 200) {
-
+              if (res.statusCode == 200 && res.data.code == 200) {
+                wx.setStorageSync('sessionId', res.data.data)
+                wx.navigateTo({
+                  url: '../index/index',
+                })
               }
             }
           })

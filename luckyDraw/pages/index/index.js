@@ -26,8 +26,8 @@ Page({
                 },
                 success: (res) => {
                   console.log(res)
-                  if (res.statusCode == 200 && res.code == 200) {
-
+                  if (res.statusCode == 200 && res.data.code == 200) {
+                    wx.setStorageSync('sessionId', res.data.data)
                   }
                 }
               })
@@ -52,6 +52,7 @@ Page({
       }
     })
   },
+  
 
   /**
    * 生命周期函数--监听页面加载
