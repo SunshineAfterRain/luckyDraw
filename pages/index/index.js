@@ -7,7 +7,7 @@ Page({
   data: {
     userInfo: 'asd'
   },
-  getUserInfo(code){
+  getUserInfo (code) {
     wx.getSetting({
       success: (res) => {
         console.log(res)

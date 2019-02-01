@@ -1,14 +1,26 @@
 
 
 <script>
-export default {
-  created () {
-    // 调用API从本地缓存中获取数据
-    const logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
+import model from '@/utils/model'
 
-    console.log('app created and cache logs by setStorageSync')
+export default {
+  methods: {
+    login () {
+      wx.getSetting({
+        success (res) {
+          if (res.authSetting['scope.userInfo']) {
+            model.login()
+          } else {
+            wx.redirectTo({
+              url: '../login/main'
+            })
+          }
+        }
+      })
+    }
+  },
+  created () {
+    this.login()
   }
 }
 </script>

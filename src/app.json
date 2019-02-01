@@ -2,7 +2,8 @@
   "pages": [
     "pages/index/main",
     "pages/mine/main",
-    "pages/draw/main"
+    "pages/draw/main",
+    "pages/login/main"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -10,10 +11,14 @@
     "navigationBarTitleText": "幸运抽奖",
     "navigationBarTextStyle": "black"
   },
+  "usingComponents": {
+    "i-tab-bar": "../static/iview/tab-bar/index",
+    "i-tab-bar-item": "../static/iview/tab-bar-item/index"
+  },
   "tabBar": {
-    "color": "#666666",
-    "selectedColor": "#e02e24",
-    "backgroundColor": "#ffffff",
+    "color": "white",
+    "borderStyle": "white",
+    "backgroundColor": "white",
     "list": [
       {
         "pagePath": "pages/index/main",

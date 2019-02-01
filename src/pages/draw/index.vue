@@ -1,12 +1,12 @@
 <template>
-  <div class="container" >
-
+  <div class="" >
+    draw
+     <tab-bar curPage="draw"></tab-bar> 
   </div>
 </template>
 
 <script>
-import card from '@/components/card'
-
+import tabBar from '@/components/layout/tabBar/tabBar.vue'
 export default {
   data () {
     return {
@@ -14,13 +14,16 @@ export default {
   },
 
   components: {
-    card
+    tabBar
   },
 
   methods: {
   },
 
   created () {
+  },
+  onShow () {
+    wx.hideTabBar()
   }
 }
 </script>
