@@ -2,6 +2,8 @@
     "usingComponents": {
       "i-tab-bar": "../../static/iview/tab-bar/index",
       "i-tab-bar-item": "../../static/iview/tab-bar-item/index",
-      "i-button": "../../static/iview/button/index"
+      "i-input": "../../static/iview/input/index",
+      "i-button": "../../static/iview/button/index",
+      "i-panel": "../../static/iview/panel/index"
     }
   }

@@ -37,11 +37,13 @@ export default {
             }
             model.login(dataSend).then((res) => {
               if (res.code === 200) {
-                wx.setStorageSync({
-                  key: 'sessionId',
+                console.log(res)
+
+                wx.setStorage({
+                  key: 'userInfo',
                   data: res.data
                 })
-                wx.redirectTo({
+                wx.switchTab({
                   url: '../index/main'
                 })
               } else {

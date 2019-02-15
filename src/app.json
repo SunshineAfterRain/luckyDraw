@@ -3,7 +3,8 @@
     "pages/index/main",
     "pages/mine/main",
     "pages/draw/main",
-    "pages/login/main"
+    "pages/login/main",
+    "pages/actionForm/main"
   ],
   "window": {
     "backgroundTextStyle": "light",

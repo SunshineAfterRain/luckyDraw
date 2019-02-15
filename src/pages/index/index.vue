@@ -1,6 +1,6 @@
 <template>
   <div class="">
-    index
+     <i-button type="success" size="large"  shape="circle" @click="goDraw">发起抽奖</i-button>
     <tab-bar curPage="homepage"></tab-bar>
   </div>
 </template>
@@ -18,6 +18,11 @@ export default {
   },
 
   methods: {
+    goDraw () {
+      wx.navigateTo({
+        url: '../actionForm/main'
+      })
+    }
   },
 
   created () {

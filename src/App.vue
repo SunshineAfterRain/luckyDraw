@@ -1,7 +1,6 @@
 
 
 <script>
-import model from '@/utils/model'
 
 export default {
   methods: {
@@ -9,7 +8,7 @@ export default {
       wx.getSetting({
         success (res) {
           if (res.authSetting['scope.userInfo']) {
-            model.login()
+
           } else {
             wx.redirectTo({
               url: '../login/main'
