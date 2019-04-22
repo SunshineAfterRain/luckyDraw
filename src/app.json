@@ -14,7 +14,8 @@
   },
   "usingComponents": {
     "i-tab-bar": "../static/iview/tab-bar/index",
-    "i-tab-bar-item": "../static/iview/tab-bar-item/index"
+    "i-tab-bar-item": "../static/iview/tab-bar-item/index",
+    "i-toast": "../static/iview/toast/index"
   },
   "tabBar": {
     "color": "white",

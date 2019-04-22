@@ -1,4 +1,7 @@
 
+<template>
+   <i-toast id="toast" />
+</template>
 
 <script>
 
@@ -8,7 +11,7 @@ export default {
       wx.getSetting({
         success (res) {
           if (res.authSetting['scope.userInfo']) {
-
+            uni.getUserInfo()
           } else {
             wx.redirectTo({
               url: '../login/main'
